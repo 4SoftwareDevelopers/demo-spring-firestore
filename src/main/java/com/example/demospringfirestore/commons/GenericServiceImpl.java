@@ -18,9 +18,9 @@ public abstract class GenericServiceImpl<I, O> implements GenericServiceAPI<I, O
 
 	public Class<O> clazz;
 
-	@SuppressWarnings("unchecked")
-	public GenericServiceImpl() {
-		this.clazz = ((Class<O>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
+	
+	public GenericServiceImpl(Class<O> entityClass) {
+		this.clazz = entityClass;
 	}
 
 	@Override

@@ -15,6 +15,10 @@ public class PersonaServiceImpl extends GenericServiceImpl<Persona, PersonaDTO> 
 	
 	@Autowired
 	private Firestore firestore;
+	
+	public PersonaServiceImpl() {
+	    super(PersonaDTO.class);
+	}
 
 	@Override
 	public CollectionReference getCollection() {
